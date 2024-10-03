@@ -1,0 +1,103 @@
+/*************************************************************************************************/
+/* LETTER PAGE */
+/*************************************************************************************************/
+
+#contents.letter .wrapper .title h2 {
+    padding: 0 20px;
+}
+
+#contents .letter {
+    color: var(--theme-color-4);
+    padding: 0 20px;
+}
+
+#contents .letter .cap {
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+#contents .letter p {
+    color: var(--theme-color-5);
+    font-size: 14pt;
+}
+
+#contents .letter h3 {
+    padding: 10px 0;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    font-size: 16pt;
+    color: #fff;
+    background-color: #0c707a33;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#contents .letter a {
+    color: var(--theme-color-4);
+    font-size: 14pt;
+}
+
+#contents .letter figure {
+    margin: 40px 0;
+    color: var(--theme-color-5);
+}
+
+#contents .letter img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+#contents .letter table tr {
+    height: 36px;
+}
+
+#contents .letter table td {
+    vertical-align: middle;
+}
+
+#contents .letter table td:nth-of-type(1) {
+    font-weight: 500;
+    color: var(--theme-color-4);
+}
+
+#contents .letter table td:nth-of-type(2) {
+    font-weight: 400;
+    color: var(--theme-color-5);
+}
+
+#contents .letter table * {
+    /* color: var(--theme-color-4) !important; */
+}
+
+#contents .letter table i {
+    display: inline-block;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+}
+
+#contents .letter p.button-wrapper {
+    margin-top: 60px;
+    text-align: center;
+}
+
+#contents .letter a.button {
+    text-transform: uppercase;
+    padding: 14px 36px;
+    font-size: 15pt;
+    font-weight: 500;
+    background-color: var(--theme-color-4);
+    color: white;
+    text-align: center;
+}
+
+footer .signatories {
+    font-style: italic;
+}

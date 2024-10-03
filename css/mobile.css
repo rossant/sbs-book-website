@@ -1,0 +1,518 @@
+/*************************************************************************************************/
+/* COLLAPSIBLE MENU */
+/* https://codepen.io/erikterwan/pen/EVzeRP */
+/*************************************************************************************************/
+
+@media screen and (max-width: 1000px) {
+
+    header #menu {
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    header #menu .collapsible-menu {
+        display: block;
+        margin-right: 30px;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    header #menu .collapsible-menu input {
+        display: block;
+        width: 38px;
+        height: 42px;
+        position: absolute;
+        top: 14px;
+        right: 28px;
+
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    }
+
+    /* Hamburger */
+    header #menu .collapsible-menu span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        top: 3px;
+        background: var(--theme-color-4);
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+            opacity 0.55s ease;
+    }
+
+    header #menu .collapsible-menu span:first-child {
+        transform-origin: 0% 0%;
+    }
+
+    header #menu .collapsible-menu span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+
+    /*
+    * Transform all the slices of hamburger
+    * into a crossmark.
+    */
+    header #menu .collapsible-menu input:checked~span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+    }
+
+    /*
+    * But let's hide the middle one.
+    */
+    header #menu .collapsible-menu input:checked~span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    /*
+    * Oh yeah and the last one should go the other direction
+    */
+    header #menu .collapsible-menu input:checked~span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    header #menu ul {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 30px 0;
+        background: var(--theme-color-1);
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        transform-origin: 0% 0%;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+
+    header #menu ul li {
+        display: block;
+        padding: 20px 0;
+        font-size: 22px;
+        margin: 0;
+        text-align: center;
+    }
+
+    header #menu ul li .button {
+        text-align: center;
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        font-size: 22px;
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    #menu .collapsible-menu input:checked~ul {
+        transform: translate(0, 0);
+        /* visibility: visible; */
+    }
+
+    #menu .collapsible-menu input:not(:checked)~ul {
+        /* visibility: hidden; */
+    }
+}
+
+
+
+/*************************************************************************************************/
+/* HERO */
+/*************************************************************************************************/
+
+/* 1200 */
+@media screen and (max-width: 1200px) {
+    #hero .cover {
+        background-size: 650px;
+        background-position: left calc(60% - 10px) top -60px;
+    }
+}
+
+/* <1000 */
+@media screen and (max-width: 1000px) {
+    #hero .wrapper {
+        flex-direction: column;
+    }
+
+    #hero .text .text-wrapper {
+        max-width: none;
+    }
+
+    #hero * {
+        text-align: center;
+    }
+
+    #hero .wrapper {
+        padding: 0;
+    }
+
+    #hero h1 {
+        white-space: normal;
+    }
+
+    #hero h2 {
+        text-align: center;
+    }
+
+    #hero .text .text-wrapper {
+        padding: 0 8% 20px 8%;
+    }
+
+    #hero .cover {
+        flex: 1;
+        background-size: contain;
+        background-position-x: center;
+        background-position: top;
+        position: relative;
+        top: -30px;
+        margin-bottom: -50px;
+    }
+
+    #hero h3 {
+        margin: 20px auto;
+    }
+}
+
+/* <650 */
+@media screen and (max-width: 650px) {
+    #hero .buttons a {
+        display: block;
+        margin-right: 0;
+    }
+
+    #hero .cover {
+        background-size: min(130%, 600px);
+        min-height: min(130vw, 600px);
+        top: -40px;
+    }
+}
+
+
+
+/*************************************************************************************************/
+/* KEY POINTS */
+/*************************************************************************************************/
+
+/* <1000 */
+@media screen and (max-width: 1000px) {
+
+    #key-points .title {
+        margin-bottom: 20px;
+    }
+
+    #key-points .cols {
+        flex-direction: column;
+    }
+
+    #key-points .col {
+        flex: 1;
+        margin: 20px 15%;
+    }
+
+}
+
+/* <650 */
+@media screen and (max-width: 650px) {
+    #key-points .col {
+        flex: 1;
+        margin: 20px 5%;
+    }
+}
+
+
+
+/*************************************************************************************************/
+/* EDITORS */
+/*************************************************************************************************/
+
+/* <650 */
+@media screen and (max-width: 650px) {
+
+    #editors .quote-wrapper {
+        background-size: 10%, 10%;
+    }
+
+    #editors .quote {
+        font-size: 16pt;
+        line-height: 1.2em;
+    }
+
+}
+
+
+
+/*************************************************************************************************/
+/* AUTHORS */
+/*************************************************************************************************/
+
+/* <1000 */
+@media screen and (max-width: 1000px) {
+
+    #authors img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #authors ul {
+        margin: 20px 0%;
+    }
+
+    #authors ul li {
+        line-height: 1.5em;
+    }
+
+}
+
+
+/* <650 */
+@media screen and (max-width: 650px) {
+    #authors .cols {
+        flex-direction: column;
+    }
+
+    #authors ul.medicine,
+    #authors ul.science,
+    #authors ul.law {
+        padding-left: 0;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 224px;
+        text-indent: 0;
+    }
+
+    #authors .cols .col img {
+        margin-top: 30px;
+    }
+}
+
+
+
+/*************************************************************************************************/
+/* NUMBERS */
+/*************************************************************************************************/
+
+/* <1000 */
+@media screen and (max-width: 1000px) {
+    #numbers .col figure {
+        width: 50%;
+        background-size: contain;
+    }
+
+    #numbers .col .number {
+        font-size: 60pt;
+        /* margin-top: 5%; */
+    }
+}
+
+
+/* <650 */
+@media screen and (max-width: 650px) {
+
+    #numbers .col figure {
+        width: 130px;
+    }
+
+    #numbers .wrapper {
+        flex-direction: column;
+    }
+
+    #numbers .col2,
+    #numbers .col3 {
+        margin-top: 60px;
+    }
+
+}
+
+
+
+/*************************************************************************************************/
+/* TOPIC */
+/*************************************************************************************************/
+
+/* <1200 */
+@media screen and (max-width: 1200px) {
+    #topic .wrapper {
+        background-size: 58%;
+        background-position-x: 7%;
+    }
+}
+
+/* <1000 */
+@media screen and (max-width: 1000px) {
+
+    #topic .cols {
+        flex-direction: column;
+    }
+
+    #topic .wrapper {
+        background-size: 500px;
+        background-position: center 100px;
+    }
+
+    #topic .cols figure {
+        min-height: 450px;
+    }
+
+    #topic .cols .text-wrapper {
+        max-width: max-content;
+    }
+
+}
+
+/* <650 */
+@media screen and (max-width: 650px) {
+    #topic .wrapper {
+        background-size: min(100%, 500px);
+        background-position-x: 80px;
+    }
+
+    #topic .cols figure {
+        min-height: min(90vw, 450px);
+    }
+}
+
+/* <500 */
+@media screen and (max-width: 500px) {
+    #topic .wrapper {
+        background-position-x: 30px;
+    }
+}
+
+
+
+/*************************************************************************************************/
+/* INFO */
+/*************************************************************************************************/
+
+/* <650 */
+@media screen and (max-width: 650px) {
+    #info .buttons {
+        padding: 0 8%;
+    }
+
+    #info .buttons .button {
+        margin: 10px 0%;
+    }
+
+    #info .buttons a {
+        display: block;
+    }
+}
+
+
+/* <350 */
+@media screen and (max-width: 350px) {
+    #info .buttons .button {
+        white-space: normal;
+    }
+}
+
+
+
+
+/*************************************************************************************************/
+/* FURTHER */
+/*************************************************************************************************/
+
+/* <1000 */
+@media screen and (max-width: 1000px) {
+    #further ul li h3 {}
+}
+
+/* <650 */
+@media screen and (max-width: 650px) {
+    #further .wrapper {
+        padding-bottom: 20px;
+    }
+
+    #further ul {
+        flex-direction: column;
+    }
+
+    #further ul li figure {
+        margin-bottom: 20px;
+    }
+
+    #further ul li {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+/*************************************************************************************************/
+/* MESSAGE */
+/*************************************************************************************************/
+
+/* <1000 */
+@media screen and (max-width: 1000px) {
+
+    #message form input,
+    #message form textarea {
+        width: 60%;
+        max-width: none;
+    }
+}
+
+/* <650 */
+@media screen and (max-width: 650px) {
+
+    #message form input,
+    #message form textarea {
+        width: 70%;
+    }
+}
+
+
+
+/*************************************************************************************************/
+/* MAIL */
+/*************************************************************************************************/
+
+/* <350 */
+@media screen and (max-width: 350px) {
+    #mail h2 {
+        font-size: 24pt;
+    }
+
+    #mail a span {
+        font-size: 24pt;
+    }
+
+}
+
+
+
+/*************************************************************************************************/
+/* FOOTER */
+/*************************************************************************************************/
+
+/* <650 */
+@media screen and (max-width: 650px) {
+    footer .copyright {
+        margin-bottom: 40px;
+    }
+
+    footer .privacy a {
+        display: block;
+        border: 0;
+        margin: 20px 0;
+        /* padding: 20px 0; */
+    }
+}

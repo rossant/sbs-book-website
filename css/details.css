@@ -1,0 +1,167 @@
+/*************************************************************************************************/
+/* DETAILS PAGE */
+/*************************************************************************************************/
+
+#contents {
+    padding-top: 100px;
+    background-color: var(--theme-color-2);
+}
+
+#contents h2 {
+    color: var(--theme-color-4);
+}
+
+
+
+section {
+    background-color: var(--theme-color-4);
+}
+
+section a {
+    color: var(--theme-color-2);
+    font-size: 13pt;
+}
+
+section a:hover {
+    filter: brightness(125%);
+}
+
+section .wrapper {
+    max-width: 700px;
+}
+
+section .title {
+    /* max-width: 700px; */
+    margin: 0 auto 35px auto;
+}
+
+section h2 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    font-size: 24pt;
+}
+
+section h3 {
+    padding: 0;
+    color: var(--theme-color-1);
+    text-align: center;
+    font-size: 14pt;
+    line-height: 1.35em;
+    font-weight: 400;
+}
+
+section p {
+    color: var(--theme-color-2);
+    line-height: 1.4em;
+    font-size: 13pt;
+}
+
+section ul {
+    padding: 0;
+}
+
+section ul li {
+    list-style: none;
+}
+
+section ul li {
+    position: relative;
+    padding: 0 10px;
+}
+
+section ul li::before,
+section ul li::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    border-style: solid;
+    border-color: transparent;
+}
+
+section ul li::before {
+    left: -7px;
+    border-width: 7px;
+    border-left-color: var(--theme-color-1);
+}
+
+section ul li::after {
+    left: -8px;
+    border-width: 8px;
+    border-left-color: var(--theme-color-1);
+}
+
+
+
+#books,
+#press-investigations {
+    background-color: var(--theme-color-3);
+}
+
+#books a,
+#press-investigations a {
+    color: #f4f4f4;
+}
+
+#books h2,
+#press-investigations h2 {
+    color: var(--theme-color-4);
+}
+
+#errata {
+    background-color: #fff;
+}
+
+#errata h2 {
+    color: var(--theme-color-1);
+}
+
+#errata a {
+    color: var(--theme-color-3);
+}
+
+
+
+#contents .wrapper {
+    padding: 40px 0;
+    max-width: calc(700px + 5%);
+}
+
+#contents table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: .8em;
+}
+
+#contents table thead {
+    display: none;
+}
+
+#contents table td {
+    color: var(--theme-color-4);
+    vertical-align: top;
+    text-align: left;
+    font-size: 13pt;
+}
+
+#contents table td:first-of-type {
+    color: var(--theme-color-3);
+}
+
+#contents table td:nth-of-type(2) {
+    color: var(--theme-color-4);
+    font-weight: 500;
+}
+
+#contents table tr.book-section td {
+    padding: 10px 0;
+}
+
+#contents table td.book-section {
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 16pt;
+    color: #fff;
+    background-color: #0c707a33;
+}
